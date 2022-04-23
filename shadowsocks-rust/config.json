@@ -1,0 +1,9 @@
+{
+    "server":"0.0.0.0",
+    "server_port":ss_port,
+    "password":"ss_passwd",
+    "timeout":300,
+    "method":"ss_method",
+    "nameserver":"1.1.1.1",
+    "mode":"tcp_and_udp"
+}

@@ -1,0 +1,11 @@
+version: '3.9'
+services: 
+  xray: 
+    container_name: shadowsocks-rust
+    image: docker.io/teddysun/shadowsocks-rust:latest
+    network_mode: host
+    restart: unless-stopped
+    volumes: 
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./config.json:/etc/shadowsocks-rust/config.json

@@ -1,0 +1,12 @@
+version: '3.9'
+services: 
+  mtg: 
+    container_name: mtg
+    image: docker.io/nineseconds/mtg:latest
+    ports: 
+      - 5555:3128
+    restart: unless-stopped
+    volumes: 
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - ./mtg.toml:/config.toml
